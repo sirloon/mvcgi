@@ -1,6 +1,7 @@
 import unicodedata
 from collections import defaultdict
 
+
 from csv import DictReader
 from biothings.utils.dataload import dict_sweep, open_anyfile
 
