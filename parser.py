@@ -1,13 +1,15 @@
+import os
 import unicodedata
 from collections import defaultdict
-
 
 from csv import DictReader
 from biothings.utils.dataload import dict_sweep, open_anyfile
 
 
-def load_data(input_file):
+def load_data(data_folder):
 
+    input_file = os.path.join(data_folder,"cgi_biomarkers_per_variant.tsv")
+    assert os.path.exists(input_file), "Can't find input file '%s'" % input_file
     with open_anyfile(input_file) as in_f:
 
         # Remove duplicated lines if any
