@@ -1,7 +1,7 @@
 {
     "version": "0.1",
     "dumper" : {
-        "data_url" : "https://www.cancergenomeinterpreter.org/data/cgi_biomarkers_latest.zip",
+        "data_url" : "http://localhost:8080/data/cgi_biomarkers_latest.zip",
         "uncompress" : true
     },
     "uploader" : {
