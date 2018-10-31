@@ -9,12 +9,15 @@ manifest.json
 It contains different sections:
 
 * "dumper": tells the studio where to get data from
+
   - "data_url" : a string, or a list of strings, containins URLs.
                  Currently supported protocols are: http, https, and ftp.
                  http/https must not be mixed with ftp (only one protocol supported)
+
   - "uncompress": true|false. tells the studio to try to uncompress downloaded data.
                   Currently supports zip, gz, bz2 and xz format.
-  - "release": optional. Format: "module:function", refers to a function returning
+
+  - "release": Optiona. Format: "module:function", refers to a function returning
                a string as a release.
                
                By default, if not provided, dumper will try to
@@ -33,14 +36,20 @@ It contains different sections:
                further, and corresponds to either an ftplib.FTP or request.Session instance.
 
 * "upload": tells the studio how to parse and upload data once it's been dumped locally
+
   - "parser" : Format "module:fuction", where function takes a data folder path as argument
                (ie. where the data was downloaded). While parsing data, it should return or yield
                dict with at least "_id" key present.
+               
   - "on_duplicates" : what to do if duplicates are found (parser returns dict with same _id).
                       Can be either error|ignore|merge. (merge will merge dict together, see
                       biothings.utils.dataload.merge_struct function
 
 * "__metadata__": describes the datasource, exposed through /metadata endpoint.
+
   - "license_url": points to license page
+  
   - "license": license name if any
+  
   - "url": datasource main web page
+
