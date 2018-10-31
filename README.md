@@ -45,7 +45,7 @@ It contains different sections:
                       Can be either error|ignore|merge. (merge will merge dict together, see
                       biothings.utils.dataload.merge_struct function
 
-* "__metadata__": describes the datasource, exposed through /metadata endpoint.
+* "\_\_metadata\_\_": describes the datasource, exposed through /metadata endpoint.
 
   - "license_url": points to license page
   
