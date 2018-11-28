@@ -7,8 +7,7 @@
     },
     "dumper" : {
         "data_url" : "https://www.cancergenomeinterpreter.org/data/cgi_biomarkers_latest.zip",
-        "uncompress" : true,
-        "release" : "version:get_release"
+        "uncompress" : true
     },
     "uploader" : {
         "parser" : "parser:load_data",
